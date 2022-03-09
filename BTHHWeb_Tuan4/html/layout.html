@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css">
+    <title>Document</title>
+    <style>
+        *{
+    margin: 0px auto;
+    padding: 0px;
+    }
+    body{
+    background-image: url(../img/body.jpg)
+    }
+    .wrapper{
+        height: 700px;
+        width: 1089px;
+        background-color: rgb(194, 238, 238);
+    }
+    nav{
+        height: 50px;
+        width: 100%;
+        background-image: url(../img/nav.jpP);
+        line-height: 50px;
+    }
+    header{
+        height: 150px;
+        width: 100%;
+        background-image: url(../img/header.png);
+    }
+    .wrapper header .head{
+        color: #eef125;
+        font-size: 100px;
+        font-weight: bold;
+        text-shadow: 5px 5px 0px #999999;
+        text-align: center;
+        line-height: 150px;
+    }
+    .wrapper header:hover p{
+        transform: rotate(30deg);
+    }
+    .content{
+        width: 100%;
+        height: 360px;
+        background-color: rgb(105, 228, 228);
+    }
+    aside{
+        height: 360px;
+        width: 30%;
+        float: left;
+    }
+    section{
+        height: 360px;
+        width: 70%;
+        float: left;
+        background-image: url(../img/section.jpg);
+    }
+    footer{
+        background-image: url(../img/header2.jpg);
+    }
+    .clear{
+    clear:both;
+    }
+    .menu li{
+    float: left;
+    width: 150px;
+    height: 50px;
+    list-style: none;
+    text-indent: 20px;
+    background-color: rgb(247, 247, 22);
+    position: relative;
+}
+.menu li .submenu{
+    position: absolute;
+    display: none;
+}
+a{
+    font-weight: bold;
+    color: blue;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-decoration: none;
+}
+.menu li:hover{
+    background-color: black;
+}
+li:hover>a{
+    font-style: italic;
+    color: rgb(239, 252, 181);
+}
+.menu li:hover .submenu{
+    display:block
+}
+nav span form #txtSumbit{
+    padding: 3px;
+    border-radius: 50%;
+}
+nav span form #txtEmail{
+    padding: 3px;
+    font-weight: bold;
+}
+.content aside article img:hover{
+    transform: rotate(20deg);
+}
+.content aside article img{
+    height: 90px;
+    width: 100%;
+}
+footer{
+    height: 140px;
+    width: 100%;
+}
+footer p{
+    text-align: right ;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bold;
+    color: aqua;
+    text-decoration: none;
+}
+.content section fieldset label{
+    color: rgb(8, 0, 0);
+}
+.content section fieldset legend{
+    color: rgb(8, 0, 0);
+}
+.content section p{
+    color: rgb(3, 0, 0);
+} 
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <nav>
+            <ul class="menu">
+                <li><a href="https://24h.com.vn">HOME</a></li>
+                <li><a href="">SERVICES</a></li>
+                <li><a href="">CONTACT</a>
+                    <ul class="submenu">
+                        <li><a href="">PHONE</a></li>
+                        <li><a href="">FACEBOOK</a></li>
+                        <li><a href="">EAMIL</a></li>
+                    </ul>
+                </li>
+                <li><a href="">ABOUT</a></li>
+                <li><a href="">HELP</a></li>
+            </ul>
+            <span>
+                <form action="dangky.php" method="post">
+                    <label for="email">Email: </label>
+                    <input type="email" name="txtEmail" id="txtEmail" required placeholder="Nhap Email">
+                    <input type="submit" value="Submit" id="txtSubmitEmail">
+                </form>
+            </span>
+        </nav>
+        <header>
+            <p class="head">Prompt</p>
+        </header>
+            <div class="content">
+                <aside>
+                    <article>
+                        <h2>A</h2>
+                        <img src="../img/s8high_800x600.jpg" alt="Drumbeat">   
+                    </article>
+                    <article>
+                        <h2>B</h2>
+                        <img src="../img/hq.jpg" alt="Drumbeat">   
+                    </article>
+                    <article>
+                        <h2>C</h2>
+                        <img src="../img/hq.jpg" alt="Drumbeat">  
+                    </article>
+                </aside>
+                <section>
+                    <p>ĐĂNG KÝ THÔNG TIN</p>
+                    <form action="" method="post">
+                        <fieldset>
+                            <legend>THONG TIN CỦA BẠN</legend>
+                            <label for="lblHoTen">Họ và tên: </label>
+                            <input type="text" name="txtHT" id="txtHT" placeholder="Nhap ho va ten" required><br>
+                            <label for="lblCCCD">CCCD/CMND: </label>
+                            <input type="number" name="numCCCD" id="numCCCD" placeholder="Nhap CCCD/CMND" required><br>
+                            <label for="lblNgaysinh">Ngày sinh: </label>
+                            <input type="date" name="dateNS" id="dateNS" placeholder="Nhap ngay sinh" required><br>
+                            <label for="lblGT">Giới tính: </label>
+                            <input type="radio" id="" name="GT">
+                            <label for="ft">Nam</label>
+                            <input type="radio" id="" name="GT">
+                            <label for="ft">Nữ</label>
+                        </fieldset>
+                    </form><br>
+                            <input type="submit" value="Submit">
+                </section>
+            </div>
+            <div class="clear"></div>
+            <footer><p>Made in INDUSTRIAL UNVIVERSITY OF HOCHIMINHCITY</p></footer>
+    </div>
+</body>
+</html>
